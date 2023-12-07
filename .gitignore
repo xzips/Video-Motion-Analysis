@@ -1,0 +1,9 @@
+
+*.db
+*.vsidx
+*.db-shm
+*.opendb
+*.ipch
+*.db-wal
+Video Motion Analysis/.vs/Video Motion Analysis/v17/.suo
+Video Motion Analysis/Video Motion Analysis/Video Motion Analysis.vcxproj.user
