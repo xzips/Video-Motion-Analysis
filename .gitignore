@@ -7,3 +7,11 @@
 *.db-wal
 Video Motion Analysis/.vs/Video Motion Analysis/v17/.suo
 Video Motion Analysis/Video Motion Analysis/Video Motion Analysis.vcxproj.user
+*.pdb
+*.idb
+*.tlog
+*.recipe
+*.ilk
+*.obj
+*.exe
+*.log
