@@ -16,3 +16,5 @@ Video Motion Analysis/Video Motion Analysis/Video Motion Analysis.vcxproj.user
 *.exe
 *.log
 *.lock
+*.ipdb
+*.iobj

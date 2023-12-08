@@ -27,8 +27,28 @@ std::vector<unsigned char*> vid2pixels(std::string videopath, int startFrame, in
         endFrame = frame_count;
     }
 
-    std::string command = ffmpegBasePath + "ffmpeg -i " + videopath + " -f image2pipe -vcodec rawvideo -pix_fmt rgba -";
 
+
+
+    std::string command = ffmpegBasePath + "ffmpeg -i " + videopath;
+
+    // Calculate the start time in seconds
+    double startTime = startFrame / framerate;
+
+    command += " -ss " + std::to_string(startTime);
+
+    // Only add the frame count if endFrame is not -1
+    if (endFrame != -1) {
+        int frameCount = endFrame - startFrame;
+        command += " -frames:v " + std::to_string(frameCount);
+    }
+
+    command += " -f image2pipe -vcodec rawvideo -pix_fmt rgba -";
+
+
+
+
+    
     std::vector<unsigned char*> frames;
 
     FILE* pipe = _popen(command.c_str(), "rb");
@@ -41,21 +61,20 @@ std::vector<unsigned char*> vid2pixels(std::string videopath, int startFrame, in
     size_t frameSize = width * height * 4; // 4 bytes per pixel for RGBA
 
     std::vector<char> buffer(frameSize);
-    int currentFrame = 0;
+    int currentFrame = startFrame;
 
     while (fread(buffer.data(), 1, buffer.size(), pipe) == frameSize)
     {
-        if (currentFrame >= startFrame && currentFrame < endFrame) {
+        if (currentFrame < endFrame) {
             unsigned char* frameData = new unsigned char[frameSize];
             std::memcpy(frameData, buffer.data(), frameSize);
             frames.push_back(frameData);
         }
-        currentFrame++;
-
-        // Break if end frame is reached
-        if (currentFrame >= endFrame) {
+        else {
+            // Break if end frame is reached
             break;
         }
+        currentFrame++;
     }
 
     if (ferror(pipe)) {
@@ -66,6 +85,7 @@ std::vector<unsigned char*> vid2pixels(std::string videopath, int startFrame, in
 
     return frames;
 }
+
 
 
 
