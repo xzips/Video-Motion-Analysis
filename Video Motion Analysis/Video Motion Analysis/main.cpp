@@ -14,7 +14,9 @@ int main() {
     
     //DirectDifferenceDemo();
 
-	TranslatedDifferenceDemo();
+	//TranslatedDifferenceDemo();
+
+    OpticalFlowDemo();
 
     return 0;
 }

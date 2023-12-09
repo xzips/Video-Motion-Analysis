@@ -137,12 +137,14 @@
   <ItemGroup>
     <ClCompile Include="DirectDifference.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OpticalFlow.cpp" />
     <ClCompile Include="TranslatedDifference.cpp" />
     <ClCompile Include="vidpixels.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demos.hpp" />
     <ClInclude Include="DirectDifference.hpp" />
+    <ClInclude Include="OpticalFlow.hpp" />
     <ClInclude Include="TranslatedDifference.hpp" />
     <ClInclude Include="vid2pixels.hpp" />
   </ItemGroup>
