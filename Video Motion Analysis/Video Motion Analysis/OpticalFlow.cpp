@@ -76,7 +76,7 @@ vector2d OpticalFlow(unsigned char* frame1, unsigned char* frame2, int width, in
 
 
     int search_window = 20; //20
-    int block_size = 30; // You can still set a default or calculate based on image size and blocks_x, blocks_y
+    int block_size = 20; // You can still set a default or calculate based on image size and blocks_x, blocks_y
 
     int half_block = block_size / 2;
     int half_search = search_window / 2;

@@ -11,9 +11,9 @@
 #include "TranslatedDifference.hpp"
 #include "OpticalFlow.hpp"
 
-void PlayVideoDemo() {
+void PlayVideoDemo(std::string vidpath) {
 
-    std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\countdown_video.mp4\"";
+    //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\countdown_video.mp4\"";
 
 
     std::tuple<int, int, double, int> video_info = vid_info(vidpath);
@@ -84,10 +84,8 @@ void PlayVideoDemo() {
 }
 
 
-void DirectDifferenceDemo() {
-    //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\earth_video.mp4\"";
-    std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\drop_video.mp4\"";
-
+void DirectDifferenceDemo(std::string vidpath) {
+   
     std::tuple<int, int, double, int> video_info = vid_info(vidpath);
 
     // std::cout the video info
@@ -165,9 +163,8 @@ void DirectDifferenceDemo() {
 
 
 
-void TranslatedDifferenceDemo() {
+void TranslatedDifferenceDemo(std::string vidpath) {
     //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\earth_video.mp4\"";
-    std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\pendulum_video.mp4\"";
 
     std::tuple<int, int, double, int> video_info = vid_info(vidpath);
 
@@ -245,9 +242,10 @@ void TranslatedDifferenceDemo() {
 }
 
 
-void OpticalFlowDemo() {
+void OpticalFlowDemo(std::string vidpath) {
     //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\pendulum_video.mp4\"";
-    std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\components_video.mp4\"";
+    //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\components_video.mp4\"";
+   
     std::tuple<int, int, double, int> video_info = vid_info(vidpath);
 
     // Print video info

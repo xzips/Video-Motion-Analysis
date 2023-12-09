@@ -139,7 +139,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OpticalFlow.cpp" />
     <ClCompile Include="TranslatedDifference.cpp" />
-    <ClCompile Include="vidpixels.cpp" />
+    <ClCompile Include="vid2pixels.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Demos.hpp" />

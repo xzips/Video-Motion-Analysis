@@ -10,13 +10,19 @@
 int main() {
 
 
-   // PlayVideoDemo();
+    //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\countdown_video.mp4\"";
+    //std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\pendulum_video.mp4\"";
+    std::string vidpath = "\"C:\\Users\\aspen\\Desktop\\Video-Motion-Analysis\\components_video.mp4\"";
+
+
+
+    //PlayVideoDemo(vidpath);
     
-    //DirectDifferenceDemo();
+    //DirectDifferenceDemo(vidpath);
 
-	//TranslatedDifferenceDemo();
+	//TranslatedDifferenceDemo(vidpath);
 
-    OpticalFlowDemo();
+    OpticalFlowDemo(vidpath);
 
     return 0;
 }
