@@ -129,8 +129,8 @@ vector2d OpticalFlow(unsigned char* frame1, unsigned char* frame2, int width, in
 
     vector2d avg_motion;
     if (count > 0) {
-        avg_motion.x = static_cast<int>(std::round(avg_dx / count));
-        avg_motion.y = static_cast<int>(std::round(avg_dy / count));
+        avg_motion.x = static_cast<double>(std::round(avg_dx / (float)count));
+        avg_motion.y = static_cast<double>(std::round(avg_dy / (float)count));
     }
     else {
         avg_motion.x = 0;
